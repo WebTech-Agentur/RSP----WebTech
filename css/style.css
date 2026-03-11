@@ -1,4 +1,4 @@
-﻿/* Base Variables */
+/* Base Variables */
 :root {
   --color-stone-dark: #2a2c2b;
   --color-stone-grey: #5c605d;
@@ -1169,14 +1169,15 @@ html[dir="rtl"] .fa-creative-circle {
 }
 
 @media (max-width: 768px) {
-
-
   .lang-dropdown {
-    position: static;
-    display: block;
-    box-shadow: none;
-    border: none;
-    background: transparent;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    background: var(--color-stone-dark);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 2000;
   }
 }
 
