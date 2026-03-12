@@ -162,6 +162,10 @@ img {
   color: var(--color-stone-dark) !important;
 }
 
+.header.scrolled .mobile-menu-btn span {
+  background-color: var(--color-stone-dark) !important;
+}
+
 .nav-container {
   display: flex !important;
   justify-content: space-between !important;
@@ -223,7 +227,7 @@ img {
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 2000; /* Higher than nav-links (1500) */
 }
 
 .mobile-menu-btn span {
@@ -237,7 +241,7 @@ img {
 
 .mobile-menu-btn.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
-  background-color: var(--color-text) !important;
+  background-color: var(--color-white) !important;
 }
 
 .mobile-menu-btn.active span:nth-child(2) {
@@ -246,7 +250,7 @@ img {
 
 .mobile-menu-btn.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
-  background-color: var(--color-text) !important;
+  background-color: var(--color-white) !important;
 }
 
 
@@ -1274,12 +1278,17 @@ html[dir="rtl"] .feature-card i {
     transition: var(--transition-smooth) !important;
     z-index: 1500 !important;
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5) !important;
-    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    display: flex !important;
   }
 
   .nav-links.active {
     right: 0 !important;
-    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
   }
 
   html[dir="rtl"] .nav-links {
@@ -1288,17 +1297,28 @@ html[dir="rtl"] .feature-card i {
     box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5) !important;
     align-items: center !important; /* Ensure items are centered in the drawer */
     text-align: center !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
   }
 
   html[dir="rtl"] .nav-links.active {
     left: 0 !important;
     right: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
   }
 
   .nav-links a {
     color: var(--color-white) !important;
     font-size: 1.2rem !important;
     margin: 1.5rem 0 !important;
+  }
+  
+  /* Ensure mobile drawer links stay white even if header is scrolled */
+  .header.scrolled .nav-links a {
+    color: var(--color-white) !important;
   }
 
   .mobile-menu-btn {
