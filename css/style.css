@@ -1202,15 +1202,19 @@ html[dir="rtl"] .logo {
   align-items: center !important;
   height: 40px !important;
   order: 10 !important;
-  z-index: 1001 !important;
-  transition: var(--transition-smooth) !important;
+}
+
+html[dir="rtl"] .hero-content h1,
+html[dir="rtl"] .hero-content p,
+html[dir="rtl"] .footer-col {
+  text-align: right;
 }
 
 html[dir="rtl"] .nav-links {
   order: 1;
 }
 
-html[dir="rtl"] html[dir="rtl"] .lang-dropdown {
+html[dir="rtl"] .lang-dropdown {
   right: auto;
   left: 0;
 }
@@ -1271,10 +1275,13 @@ html[dir="rtl"] .feature-card i {
     right: auto !important;
     left: -100% !important;
     box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5) !important;
+    align-items: center !important; /* Ensure items are centered in the drawer */
+    text-align: center !important;
   }
 
   html[dir="rtl"] .nav-links.active {
     left: 0 !important;
+    right: auto !important;
   }
 
   .nav-links a {
