@@ -468,7 +468,16 @@ img {
 }
 
 .value-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-weight: 500;
+}
+
+.value-item::before {
+  content: '\2713';
+  color: var(--color-accent);
+  font-weight: bold;
 }
 
 .about-image {
