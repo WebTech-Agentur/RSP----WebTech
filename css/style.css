@@ -83,10 +83,6 @@ img {
   position: relative;
 }
 
-.section-title.no-line::after {
-  display: none !important;
-}
-
 .section-title::after {
   content: '';
   display: block;
@@ -602,7 +598,109 @@ img {
 }
 
 .contact-item {
+  display: flex;
+  gap: 1.5rem;
   margin-bottom: 2rem;
+}
+
+/* Product Showcase Zig-Zag */
+.product-showcase {
+  padding: 0 0 8rem 0;
+}
+
+.product-row {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+  margin-bottom: 10rem;
+}
+
+.product-row:last-child {
+  margin-bottom: 0;
+}
+
+.product-row:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.product-showcase-image {
+  flex: 1.3;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  height: 550px;
+  position: relative;
+}
+
+.product-showcase-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.product-row:hover .product-showcase-image img {
+  transform: scale(1.08);
+}
+
+.product-showcase-content {
+  flex: 1;
+}
+
+.product-tag {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background: var(--color-beige);
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+}
+
+.product-showcase-content h3 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: var(--color-stone-dark);
+  font-family: 'Playfair Display', serif;
+}
+
+.product-showcase-content p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: var(--color-stone-grey);
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 992px) {
+  .product-row,
+  .product-row:nth-child(even) {
+    flex-direction: column !important;
+    gap: 3rem;
+    margin-bottom: 8rem;
+  }
+
+  .product-showcase-image {
+    width: 100%;
+    height: 450px;
+  }
+
+  .product-showcase-content {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-showcase-content h3 {
+    font-size: 2.2rem !important;
+  }
+  
+  .product-showcase-image {
+    height: 350px;
+  }
 }
 
 .contact-item h3 {
