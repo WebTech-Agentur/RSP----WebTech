@@ -390,8 +390,9 @@ img {
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: 3.5rem;
   margin-top: 3rem;
+  padding: 1rem 0; /* Add some vertical padding for shadows */
 }
 
 .feature-card {
@@ -399,6 +400,7 @@ img {
   box-shadow: var(--shadow-sm);
   border-radius: 8px;
   overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Added subtle border */
   transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
@@ -746,6 +748,7 @@ textarea.form-control {
 .legal-content {
   max-width: 800px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .legal-content h2 {
@@ -1528,7 +1531,7 @@ html[dir="rtl"] .feature-card i {
 
   .features-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .products-grid {
