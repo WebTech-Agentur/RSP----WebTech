@@ -845,6 +845,35 @@ footer {
     gap: 2rem;
   }
 
+  .about-grid {
+    text-align: center;
+  }
+
+  .about-grid .section-title {
+    text-align: center !important;
+  }
+
+  .about-grid .values-list {
+    grid-template-columns: 1fr !important;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  .about-grid .value-item {
+    justify-content: center;
+  }
+
+  .about-image-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .about-image {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
   .area-row:nth-child(even) {
     flex-direction: column;
   }
