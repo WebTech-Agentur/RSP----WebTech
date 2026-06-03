@@ -1655,3 +1655,12 @@ html[dir="rtl"] .feature-card i {
     font-size: 1.6rem !important;
   }
 }
+
+/* Mailto link hover styles */
+a[href^="mailto:"] {
+  transition: color var(--transition-fast);
+}
+
+a[href^="mailto:"]:hover {
+  color: var(--color-accent) !important;
+}
