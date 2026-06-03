@@ -751,7 +751,11 @@ textarea.form-control {
 .legal-content {
   max-width: 800px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
+}
+
+html[dir="rtl"] .legal-content {
+  text-align: right;
 }
 
 .legal-content h2 {
