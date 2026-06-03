@@ -845,35 +845,6 @@ footer {
     gap: 2rem;
   }
 
-  .about-grid {
-    text-align: center;
-  }
-
-  .about-grid .section-title {
-    text-align: center !important;
-  }
-
-  .about-grid .values-list {
-    grid-template-columns: 1fr !important;
-    justify-content: center;
-    gap: 1.25rem;
-  }
-
-  .about-grid .value-item {
-    justify-content: center;
-  }
-
-  .about-image-wrapper {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .about-image {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
   .area-row:nth-child(even) {
     flex-direction: column;
   }
@@ -1579,5 +1550,85 @@ html[dir="rtl"] .feature-card i {
 
   .values-list {
     grid-template-columns: 1fr;
+  }
+}
+
+/* About Section Mobile Adjustments (320px - 768px) */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+  }
+
+  .about-text {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  html[dir="rtl"] .about-text {
+    text-align: right !important;
+  }
+
+  .about-text h2.section-title {
+    text-align: left !important;
+    font-size: 1.8rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  html[dir="rtl"] .about-text h2.section-title {
+    text-align: right !important;
+  }
+
+  .about-text h2.section-title::after {
+    margin: 0.8rem 0 0 0 !important;
+  }
+
+  html[dir="rtl"] .about-text h2.section-title::after {
+    margin: 0.8rem 0 0 auto !important;
+  }
+
+  .about-text p {
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .values-list {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 2rem !important;
+    padding: 0 !important;
+  }
+
+  .value-item {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+
+  .value-item::before {
+    margin-top: 0.2rem !important;
+  }
+
+  .about-image-wrapper {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .about-image {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
   }
 }
